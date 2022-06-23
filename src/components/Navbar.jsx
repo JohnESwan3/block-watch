@@ -12,14 +12,14 @@ const Navbar = () => {
 
   return (
     <div className="rounded-div flex items-center justify-between h-20 font-bold">
-      <Link to="/">
+      <Link to="/" className="px-2">
         <h1 className="text-2xl">BlockWatch</h1>
       </Link>
       <div className="hidden md:block">
         <ThemeToggle />
       </div>
       {/*Sign in / Sign Up*/}
-      <div className="hidden md:block">
+      <div className="hidden md:block px-2">
         <Link to="/signin" className="p-4 hover:text-accent">
           Sign In
         </Link>
@@ -31,7 +31,10 @@ const Navbar = () => {
         </Link>
       </div>
       {/*Menu Icon*/}
-      <div onClick={handleNav} className="block md:hidden cursor-pointer z-10">
+      <div
+        onClick={handleNav}
+        className="block md:hidden cursor-pointer z-10 px-2"
+      >
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
 
@@ -43,7 +46,7 @@ const Navbar = () => {
             : "fixed left-[-100%] top-20 h-[90%] flex flex-col items-center justify-between ease-in duration-300"
         }
       >
-        <ul className="w-full p-4">
+        <ul className="w-full p-4 px-5">
           <li className="border-b py-6">
             <Link to="/">Home</Link>
           </li>

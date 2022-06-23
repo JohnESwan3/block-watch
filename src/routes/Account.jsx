@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function Account() {
   return (
@@ -7,3 +7,5 @@ function Account() {
     </div>
   );
 }
+
+export default Account;

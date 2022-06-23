@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function Signin() {
   return (
@@ -7,3 +7,5 @@ function Signin() {
     </div>
   );
 }
+
+export default Signin;

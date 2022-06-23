@@ -1,9 +1,14 @@
-import React from 'react';
+import React from "react";
+import CoinSearch from "../components/CoinSearch";
 
-function Home() {
+function Home({ coins }) {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>
+        <CoinSearch coins={coins} />
+      </h1>
     </div>
   );
 }
+
+export default Home;

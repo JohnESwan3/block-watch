@@ -7,6 +7,7 @@ import Signin from "./routes/Signin";
 import Signup from "./routes/Signup";
 import Account from "./routes/Account";
 import axios from "axios";
+import CoinPage from "./routes/CoinPage";
 
 function App() {
   const [coins, setCoins] = useState([]);

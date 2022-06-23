@@ -1,9 +1,11 @@
 import React from 'react';
+import {ThemeProvider} from "./context/ThemeContext";
+
 function App() {
   return (
-    <div >
+    <ThemeProvider>
 
-    </div>
+    </ThemeProvider>
   );
 }
 

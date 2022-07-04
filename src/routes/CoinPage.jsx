@@ -15,16 +15,16 @@ const CoinPage = () => {
   }, [url]);
 
   return (
-    <div>
-      <div>
-        <img src={coin.image?.large} alt="/" />
+    <div className="rounded-div my-12 py-8">
+      <div className="flex py-8">
+        <img className="w-20 mr-8" src={coin.image?.large} alt="/" />
         <div>
-          <p>{coin?.name} price</p>
+          <p className="text-3xl font-bold">{coin?.name} price</p>
           <p>({coin.symbol?.toUpperCase()} / USD)</p>
         </div>
       </div>
 
-      <div>
+      <div className="grid md:grid-cols-2 gap-8">
         <div>
           <div>
             {coin.market_data?.current_price ? (
@@ -37,9 +37,10 @@ const CoinPage = () => {
                   <SparklinesLine color="teal" />
                 </Sparklines>
               </div>
-              <div>
+
+              <div className="flex justify-between py-4">
                 <div>
-                  <p>Market Cap</p>
+                  <p className="text-gray-500">Market Cap</p>
                   {coin.market_data?.market_cap ? (
                     <p>${coin.market_data.market_cap.usd.toLocaleString()}</p>
                   ) : null}
@@ -86,6 +87,33 @@ const CoinPage = () => {
                   <p>Trust Score</p>
                   {coin.tickers ? (
                     <p>{coin.liquidity_score.toFixed(2)}</p>
+                  ) : null}
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <p>Price Change (24h)</p>
+                  {coin.market_data ? (
+                    <p>
+                      {coin.market_data.price_change_percentage_24h.toFixed(2)}%
+                    </p>
+                  ) : null}
+                </div>
+                <div>
+                  <p>Price Change (7d)</p>
+                  {coin.market_data ? (
+                    <p>
+                      {coin.market_data.price_change_percentage_7d.toFixed(2)}%
+                    </p>
+                  ) : null}
+                </div>
+                <div>
+                  <p>Price Change (14d)</p>
+                  {coin.market_data ? (
+                    <p>
+                      {coin.market_data.price_change_percentage_14d.toFixed(2)}%
+                    </p>
                   ) : null}
                 </div>
               </div>

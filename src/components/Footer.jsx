@@ -39,11 +39,11 @@ const Footer = () => {
               <div className="py-4">
                 <form>
                   <input
-                    className="bg-primary border border-input p-2 mr-2 w-full shadow-inner rounded-2xl md:w-auto"
+                    className="bg-primary border border-input p-2 mr-2 w-full shadow-lg rounded-2xl md:w-auto"
                     type="email"
                     placeholder="Enter Your Email"
                   />
-                  <button className="bg-button text-btnText px-4 p-2 w-full rounded-2xl shadow-xl hover:shadow-2xl md:w-auto my-2">
+                  <button className="bg-button text-btnText px-4 p-2 w-full rounded-2xl shadow-lg hover:shadow-xl md:w-auto my-2">
                     Sign Up
                   </button>
                 </form>
